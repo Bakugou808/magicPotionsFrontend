@@ -1,0 +1,248 @@
+.order-pg-cont {
+  min-width: 667px;
+}
+
+.img-cont {
+  /* position: absolute; */
+  width: 616px;
+  height: 355px;
+  left: 412px;
+  top: 136px;
+
+  background: url("./magicPotionImg.png");
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin-top: 30px; */
+}
+
+.mP-title {
+  /* position: absolute; */
+  width: 279px;
+  height: 64px;
+  left: 581px;
+  top: 48px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 64px;
+  /* identical to box height, or 178% */
+
+  text-align: center;
+
+  color: #000000;
+  /* margin-bottom: 20px; */
+}
+
+.field-title {
+  position: relative;
+  width: 296px;
+  left: -134px;
+  top: 25%;
+  bottom: 75%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #555555;
+}
+
+.title-section {
+  display: inline-grid;
+  align-content: center;
+  justify-items: center;
+  margin-bottom: 15px;
+}
+
+.form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-cont {
+  margin-bottom: 120px;
+}
+.order-form {
+  width: 616px;
+}
+
+.your-order-sect {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.divider {
+  width: 616px;
+  height: 1px;
+  margin-top: 25px;
+  margin-bottom: 21px;
+
+  background: #d3d3d3;
+}
+
+.billing-sect {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+#ccNum-title {
+  left: -90px;
+  top: 12px;
+}
+
+#exp-date-title {
+  left: -104px;
+  top: 12px;
+}
+#billing-header {
+  position: relative;
+  width: 179px;
+  height: 32px;
+  left: -1px;
+  top: 14px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000000;
+}
+
+#exp-date-field {
+  width: 136px;
+  display: flex;
+}
+
+#qty {
+  top: 12px;
+}
+#qty-section {
+  /* display: grid;
+  justify-items: center;
+  align-content: center; */
+}
+
+/* #total-price-section, */
+.contact-sect {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+#total-price {
+  left: -118px;
+  top: 12px;
+}
+
+#order-header {
+  position: relative;
+  top: 1px;
+  width: 106px;
+  height: 32px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0px;
+  margin-top: 30px;
+  /* identical to box height, or 160% */
+
+  color: #000000;
+}
+
+#order-btn {
+  position: relative;
+  width: 207px;
+  height: 56px;
+  /* left: 617px; */
+  top: 10px;
+
+  background: #2a605c;
+  border-radius: 4px;
+}
+
+#btn-text {
+  position: relative;
+  height: 16px;
+  /* left: 20px;
+  right: 20px;
+  top: 21px; */
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  /* Primary Colors / White */
+
+  color: #ffffff;
+}
+
+#contact-field {
+  width: 616px;
+}
+
+#contact-title {
+  left: -267px;
+  top: 12px;
+}
+
+#contact-header {
+  margin: 0px;
+  position: relative;
+  width: 79px;
+  height: 32px;
+  left: -2px;
+  top: 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.input-error {
+  margin: 0px;
+  color: red;
+  margin-top: 5px;
+}
+
+.input-field-error-box {
+  padding-left: 15px;
+
+  width: 296px;
+  height: 56px;
+  border: 1px solid #949494;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border-color: red;
+}
+.input-field {
+  /* position: relative;
+  left: 0%;
+  right: 0%;
+  top: 30%;
+  bottom: 0%; */
+  padding-left: 15px;
+
+  width: 296px;
+  height: 56px;
+  border: 1px solid #949494;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
