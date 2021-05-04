@@ -106,13 +106,13 @@ const OrderForm = () => {
         case "payment":
           // use credit-validation library to validate credit card number
           let ccReport = valid.number(formFields.payment.credit_card_number);
-          if (!ccReport.isValid) {
-            isValid = false;
-            errors["credit_card_number"] =
-              "Please enter a valid Credit Card number.";
-          } else {
-            errors["credit_card_number"] = false;
-          }
+          // if (!ccReport.isValid) {
+          //   isValid = false;
+          //   errors["credit_card_number"] =
+          //     "Please enter a valid Credit Card number.";
+          // } else {
+          //   errors["credit_card_number"] = false;
+          // }
           // use credit-validation library to validate credit card exp
           let expReport = valid.expirationDate(
             formFields.payment.credit_card_exp
@@ -142,7 +142,7 @@ const OrderForm = () => {
           <div id="qty-section">
             <div>
               <h3 id="qty" className="field-title">
-                Qty*
+                Qty<span id="asterisk">*</span>
               </h3>
               <input
                 id="qty-field"
