@@ -1,5 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import OrderPage from "../OrderPage";
 import OrderForm from "../OrderForm";
 import { render, fireEvent, cleanup, screen } from "@testing-library/react";

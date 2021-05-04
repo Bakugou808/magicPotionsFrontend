@@ -45,7 +45,6 @@ const OrderForm = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     if (validateFields()) {
-      debugger;
       postOrder({ order: formFields })
         .then((json) => {
           if (json.error) {
@@ -147,6 +146,7 @@ const OrderForm = () => {
               </h3>
               <input
                 id="qty-field"
+                data-testid="qty-input"
                 className={
                   formErrors.quantity ? "input-field-error-box" : "input-field"
                 }
@@ -189,6 +189,7 @@ const OrderForm = () => {
           </h3>
           <input
             id="contact-field"
+            data-testid="email-input"
             className={
               formErrors.email ? "input-field-error-box" : "input-field"
             }
@@ -216,6 +217,7 @@ const OrderForm = () => {
               </h3>
               <input
                 id="ccNum-field"
+                data-testid="ccNum-input"
                 className={
                   formErrors.cc ? "input-field-error-box" : "input-field"
                 }
@@ -240,6 +242,7 @@ const OrderForm = () => {
               </h3>
               <input
                 id="exp-date-field"
+                data-testid="exp-input"
                 className={
                   formErrors.credit_card_exp
                     ? "input-field-error-box"
