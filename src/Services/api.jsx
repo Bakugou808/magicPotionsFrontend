@@ -1,6 +1,6 @@
-const magicPotionsApi =
-  "https://magic-potions-backend-api.herokuapp.com/api/v1/api/magic";
-// const magicPotionsApi = "http://localhost:3000/api/v1/api/magic";
+// const magicPotionsApi =
+// "https://magic-potions-backend-api.herokuapp.com/api/v1/api/magic";
+const magicPotionsApi = "http://localhost:3000/api/v1/api/magic";
 
 const headers = () => {
   return {
