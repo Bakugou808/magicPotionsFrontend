@@ -1,9 +1,8 @@
 # README
 
-Magic Potions -- a Curology Solution
+Magic Potions
 
-Magic Potions is a site where users get once-in-a-lifetime access to
-Curology's life changing magic potions!
+Magic Potions is a site where users get once-in-a-lifetime access to life changing magic potions!
 
 The site allows you to order 1-3 Magic Potions upon form completion + submission. Once input fields are filled and validated your order will be processed, a confirmation alert will be displayed to you and the form will reset if the request was successful. Upon failure, errors will be returned and indicators will render, detailing which inputs caused the errors.
 
@@ -88,3 +87,91 @@ Thank you for taking the time to review my code. I look forward to discussing mo
 Regards,
 
 Janu
+
+Deliverables:
+
+Front end specifications:
+
+- Implement a form to mimic (as close as possible) the attached Figma example. Try
+  and get your submission as close a match as possible to the designer's work. This
+  is an exercise in implementing a design to spec.
+  https://www.figma.com/file/OjlDZ9TFEoIVURpyc3vbWQ/Magic-Potion-Form?
+  node-id=1%3A3
+
+1. Capture the following user information, note that all fields are mandatory:
+   Qty (quantity) field that allows user to specify how many potions they'd
+   like to purchase. ()Max 3).
+
+- Total Price (calculated dynamically & read only) field that displays the
+  product of the quantity multiplied by the base unit price of 49.99 per
+  potion.
+- Email Address.
+- Credit Card Number & Expiration Date (normally, we would not be storing
+  payment information and would prefer to integrate a service such as Stripe
+  or Square. For the purpose of this exercise, assume we have a magical
+  merchant system to process our magic potion orders).
+
+2. A button that submits the form and validates all fields are completed properly
+   and that none are empty.
+
+- On success:
+
+* All fields should clear back to an empty state
+
+- On failure:
+
+* Fields should not clear
+* Display an indicator showing which field caused the failure
+
+- We will also be verifying that we cannot do such things as:
+
+* Order more than 3 potions
+* Enter a non-numeric value in the quantity field
+* Submit multiple orders under the same email
+
+3. A notification to the user after the form was submitted to the API
+
+- e.g. "Your order has been placed!", "Error: Magic potion order may not
+  exceed maximum quantity", "A user with the same name at this address
+  already exists"
+
+4. Validations and tests
+
+Backend specifications:
+
+1. Create an API that provides the following endpoint
+
+- POST /api/magic
+- Receives the following payload
+  {
+  "email": "string",
+  "quantity": number,
+  "total": number,
+  "payment": {
+  "ccNum": "string",
+  "exp": "string",
+  },
+  }
+
+- Before adding a new order to the DB, verify that an order with the same
+  email address doesn't already exist.
+- Returns the following status and unique id, if a new order is created
+  successfully.
+  201 CREATED
+  {
+  "id": uid
+  }
+  Returns the following error if an order already exists with the same email
+  address.
+  422 ALREADY EXISTS
+  {
+  "error": "Already Exists"
+  }
+
+2. API endpoints should implement
+   Backend validations and not rely on Frontend validations to protect our system's
+   data integrity.
+
+- Please add at least one backend validation (for email uniqueness &
+  to make sure it is a valid email); ideally, we'd want to see some backend validation
+  for the other data fields too.
