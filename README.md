@@ -24,14 +24,14 @@ React
 
 To run tests: use the common ‘npm run test’
 
-# Local Usage:
+## Local Usage:
 
 In order to run the site, clone this repository to your local machine. In the repo you will see a frontend and a backend folder. Navigate to the backend folder and run the commands print `'bundle'`, and then `'rails s'` in your terminal to install gems and start the backend server on localhost:3000. Next, in a separate terminal, navigate to the frontend folder and run the commands 'npm install', and then 'npm start' to install dependencies and start the frontend server on localhost:3001.
 
 Alternatively go to [“https://magic-potions-fronend.herokuapp.com/”](https://magic-potions-fronend.herokuapp.com/)
 (yes that is the correct url - I made a typo as I was deploying the frontend - whoops!)
 
-# Backend Data Schema:
+## Backend Data Schema:
 
 The database contains a single table called **“Orders”**, each entry contains all the related details to a specific, unique order.
 
@@ -51,7 +51,7 @@ With its current requirements, scaling this shouldn’t be a problem. Since the 
 
 - _email + orderId + total + ccNum + ccExp + uuid ⇒ (30 + 64 + 32 + 12 + 64 + 4) x bytes = 206 bytes → round up to 250 bytes → if every person made an order the amount of memory required would be less than 2GB_
 
-# Frontend Architecture:
+## Frontend Architecture:
 
 The frontend architecture consists of a Services Folder, CSS folder and Components folder. The Services folder contains a single file called 'api.jsx' that contains the API call for a post request to `‘/api/magic’`. The CSS folder contains the magicPotionImg.png file and OrderPage.css file.
 
@@ -61,7 +61,7 @@ The App component acts as the top level container for the entire application, al
 
 The function validateFields uses a switch statement to iterate through the form’s state and check the validity of each value. The email field is put through a regex operation to confirm it is in the proper format. The quantity field checks the range is between 1 and 3. The total field is dynamically determined by the quantity, and therefore is verified by the quantity verification. The payment fields were verified by integrating a credit card verification library called Card Validator.
 
-# Future Improvements:
+## Future Improvements:
 
 With more time and in a different environment I would do a few things differently.
 
@@ -81,7 +81,7 @@ Implementing a Primary/Replica Replication Model would allow for high availabili
 
 Depending on the needs of the application, we could also use indexing to reduce the lookup time on tables for specific fields, as well as add additional verification for data integrity.
 
-# Final Thoughts:
+## Final Thoughts:
 
 Thank you for taking the time to review my code. I look forward to discussing more about the opportunity to work together!
 
@@ -89,9 +89,9 @@ Regards,
 
 Janu
 
-## Deliverables:
+# Deliverables:
 
-# Front end specifications:
+## Frontend specifications:
 
 - Implement a form to mimic (as close as possible) the attached Figma example. Try
   and get your submission as close a match as possible to the designer's work. This
@@ -138,7 +138,7 @@ Janu
 
 4. Validations and tests
 
-# Backend specifications:
+## Backend specifications:
 
 1. Create an API that provides the following endpoint
 
