@@ -101,7 +101,7 @@ Janu
 
 1. Capture the following user information, note that all fields are mandatory:
    Qty (quantity) field that allows user to specify how many potions they'd
-   like to purchase. ()Max 3).
+   like to purchase. (Max 3).
 
 - Total Price (calculated dynamically & read only) field that displays the
   product of the quantity multiplied by the base unit price of 49.99 per
